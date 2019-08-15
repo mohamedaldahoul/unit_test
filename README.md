@@ -3,8 +3,11 @@
 npm i jest
 
 "scripts": {
+
     "test": "jest",
+
     "testwatch": "jest --watchAll"
+    
   },
 
 npm test

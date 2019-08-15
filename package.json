@@ -19,5 +19,6 @@
   "homepage": "https://github.com/mohamedaldahoul/unit_test#readme",
   "devDependencies": {
     "jest": "^24.8.0"
-  }
+  },
+  "dependencies": {}
 }

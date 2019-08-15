@@ -8,5 +8,7 @@ npm i jest
   },
 
 npm test
+
 yarn test
+
 npm run testwatch

@@ -54,3 +54,21 @@ test('Admin should be in usernames', ()=>{
   username = ['john', 'karan', 'admin'];
   expect(username).toContain('admin')
 })
+
+// working with async data
+
+Promise
+test('User Promise fetch name should be Leanne Graham', ()=>{
+  expect.assertions(1);
+  return sumFunctions.fetchUser()
+    .then(data =>{
+      expect(data.name).toEqual('Leanne Graham');
+    })
+})
+
+// Async
+test('User Async fetch name should be Leanne Graham', async ()=>{
+  expect.assertions(1);
+  const data = await sumFunctions.fetchUser();
+  expect(data.name).toEqual('Leanne Graham');
+})

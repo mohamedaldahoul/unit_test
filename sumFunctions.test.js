@@ -1,5 +1,29 @@
 const sumFunctions = require('./sumFunctions');
 
+// beforeEach(()=> initDatabase());
+// afterEach(()=> closeDatabase());
+
+// beforeAll(()=> initDatabase());
+// afterAll(()=> closeDatabase());
+
+// const initDatabase = () => console.log('Database Initialized...');
+// const closeDatabase = () => console.log('Database Closed...');
+const nameCheck = () => console.log('Checking Name...');
+
+describe('Checking Names', ()=>{
+  beforeEach(()=> nameCheck());
+
+  test('User is Mo', ()=>{
+    const user = 'Mo';
+    expect(user).toBe('Mo');
+  })
+
+  test('User is Al', ()=>{
+    const user = 'Al';
+    expect(user).toBe('Al');
+  })
+})
+
 //toBe
 test('Add 2 + 2 to equal 4', ()=>{
   expect(sumFunctions.add(2,2)).toBe(4);
@@ -57,7 +81,7 @@ test('Admin should be in usernames', ()=>{
 
 // working with async data
 
-Promise
+// Promise
 test('User Promise fetch name should be Leanne Graham', ()=>{
   expect.assertions(1);
   return sumFunctions.fetchUser()
